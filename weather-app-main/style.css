@@ -1,0 +1,171 @@
+/* 🌸 Luxury Weather App by Maja Nikoljic */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0, #f3e5f5);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  color: #4a2c2a;
+}
+
+/* Main container */
+.container {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Title */
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #a83f66;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #70484f;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+/* Toggle section */
+#unit-toggle {
+  margin-bottom: 25px;
+}
+
+#unit-toggle label {
+  margin: 0 10px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #a83f66;
+}
+
+input[type="radio"] {
+  accent-color: #a83f66;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+#city-input {
+  padding: 12px 16px;
+  width: 60%;
+  border: 2px solid #e0b7c6;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  background-color: #fffafc;
+  transition: all 0.2s ease-in-out;
+}
+
+#city-input:focus {
+  border-color: #a83f66;
+  box-shadow: 0 0 10px rgba(168, 63, 102, 0.2);
+}
+
+#search-button {
+  padding: 12px 25px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #a83f66;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+#search-button:hover {
+  background-color: #8d2f53;
+  transform: scale(1.05);
+}
+
+/* Weather card */
+.weather-card {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+}
+
+.weather-card p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
+
+/* Forecasts */
+#daily-forecast, #hourly-forecast {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+#daily-forecast div, #hourly-forecast div {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(234, 172, 197, 0.4);
+  border-radius: 15px;
+  padding: 15px 10px;
+  min-width: 120px;
+  font-weight: 600;
+  color: #5a3a3e;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+}
+
+#daily-forecast div:hover, #hourly-forecast div:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(to bottom right, #fff5f8, #ffe6ef);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+/* Footer attribution */
+.attribution {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #70484f;
+}
+
+.attribution a {
+  color: #a83f66;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.attribution a:hover {
+  color: #7a2843;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #city-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #search-button {
+    width: 100%;
+  }
+  #daily-forecast div, #hourly-forecast div {
+    flex: 1 1 100%;
+  }
+}

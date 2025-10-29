@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxury Weather App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">🌤 The Weather Atelier</h1>
+    <p class="subtitle">Where every forecast feels like art.</p>
+
+    <div id="unit-toggle">
+      <label>
+        <input type="radio" name="unit" value="metric" checked> Metric
+      </label>
+      <label>
+        <input type="radio" name="unit" value="imperial"> Imperial
+      </label>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="city-input" placeholder="Enter a city name..." />
+      <button id="search-button">Search</button>
+    </div>
+
+    <div class="weather-card">
+      <p><strong>Feels like:</strong> <span id="temp">--°C</span></p>
+      <p><strong>Humidity:</strong> <span id="humidity">--%</span></p>
+      <p><strong>Wind:</strong> <span id="wind">-- km/h</span></p>
+      <p><strong>Precipitation:</strong> <span id="precipitation">-- mm</span></p>
+    </div>
+
+    <section>
+      <h2>🌸 Daily Forecast</h2>
+      <div id="daily-forecast"></div>
+    </section>
+
+    <section>
+      <h2>🌙 Hourly Forecast</h2>
+      <div id="hourly-forecast"></div>
+    </section>
+
+    <footer class="attribution">
+      <p>Coded with 💖 by <a href="https://github.com/YourUsername" target="_blank">Maja Nikoljic</a></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
